@@ -18,6 +18,19 @@ function updateCount(num, maxNum) {
         }, 12);
     }
 }
+/* ----------- abrir e fechar navbar menu ----------- */
+
+hamburger.addEventListener("click", () => {
+    document.body.classList.toggle("open");
+    document.body.classList.toggle("stopScrolling");
+});
+
+links.forEach((link) => 
+link.addEventListener("click", () => {
+    document.body.classList.remove("open");
+    document.body.classList.remove("stopScrolling");
+})
+);
 
 
 /* ----------- codigo do Navbar ----------- */
