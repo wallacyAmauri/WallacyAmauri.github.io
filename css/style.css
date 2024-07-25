@@ -872,9 +872,15 @@ footer .social-media {
     .home-content h1{
         font-size: 3.4rem;
     }
-    .home-img img{
+    .home-img #fundo{
         width: 70vw;
         margin-top: 4rem;
+    }
+    .home-img .dots{
+        display: none;
+    }
+    .home-img .circle{
+        left: 40rem;
     }
     .social-media-icon a{
         display: inline-flex;
@@ -895,7 +901,7 @@ footer .social-media {
     }
 }
 @media (max-width: 360px){
-    .home-img img{
+    .home-img #fundo{
         width: 90vw;
     }
     .social-media-icon a {
