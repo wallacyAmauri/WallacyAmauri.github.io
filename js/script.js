@@ -1,6 +1,8 @@
 const header = document.querySelector("header");
+const hamburger = document.querySelector(".hamburger");
 
 window.addEventListener("scroll", () => {
+    activeLink();
     if(!skillsPlayed) skillsCounter();
     if(!mlPlayed) mlCounty();
     
@@ -16,6 +18,7 @@ function updateCount(num, maxNum) {
         }, 12);
     }
 }
+
 
 /* ----------- codigo do Navbar ----------- */
 
@@ -45,3 +48,11 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+/* ----------- Digitilazação ----------- */
+const typed = new Typed(".text-home", {
+    strings: ["Frontend Developer", "Geolocalização","Social Midia","Trafego Pago", "Designer UI/Ux","Automação Web"],
+    typeSpeed: 90,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+  });
