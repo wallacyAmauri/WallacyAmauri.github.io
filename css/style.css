@@ -188,7 +188,7 @@ ul{
 
 .section {
     position: relative;
-    padding: var(--section-padding) 0;
+    padding: var(--section-padding) 0 1rem 0;;
 }
 
 .form-input{

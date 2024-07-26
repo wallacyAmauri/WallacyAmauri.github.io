@@ -25,18 +25,18 @@ hamburger.addEventListener("click", () => {
     document.body.classList.toggle("stopScrolling");
 });
 
-links.forEach((link) => 
-link.addEventListener("click", () => {
-    document.body.classList.remove("open");
-    document.body.classList.remove("stopScrolling");
-})
-);
+// links.forEach((link) => 
+// link.addEventListener("click", () => {
+//     document.body.classList.remove("open");
+//     document.body.classList.remove("stopScrolling");
+// })
+// );
 
 
 /* ----------- codigo do Navbar ----------- */
 
 function stickNavbar(){
-    header.classList.toggle("scrolled",window.pageYOffset > 0);
+    header.classList.toggle("scrolled",window.scrollY > 0);
  }
  
  stickNavbar();
