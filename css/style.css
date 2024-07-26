@@ -378,7 +378,7 @@ body.open .hamburger .bar:last-child{
 }
 
 /*-----------Showcase Area styling----------- */
-#section{
+#home{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
@@ -837,7 +837,7 @@ footer .social-media {
     }
 }
 @media (max-width: 900px){
-    #section{
+    #home{
         padding: 10rem 3% 2rem;
     }
 }

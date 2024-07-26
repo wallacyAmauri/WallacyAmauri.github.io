@@ -1,10 +1,11 @@
 const header = document.querySelector("header");
 const hamburger = document.querySelector(".hamburger");
+const links = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
     activeLink();
-    if(!skillsPlayed) skillsCounter();
-    if(!mlPlayed) mlCounty();
+    // if(!skillsPlayed) skillsCounter();
+    // if(!mlPlayed) mlCounty();
     
 });
 
@@ -18,6 +19,24 @@ function updateCount(num, maxNum) {
         }, 12);
     }
 }
+
+/* ----------- scroll do link active ----------- */
+
+function activeLink() {
+    let sections = document.querySelectorAll("section[id]");    
+    let passedSections = Array.from(sections).map((sct, i) => {
+        return {
+            y:  sct.getBoundingClientRect().top - header.offsetHeight,
+            id: i,
+        };
+    })
+    .filter((sct) => sct.y <= 0);
+    let currSectionID = passedSections.at(-1).id;
+
+    links.forEach((l) => l.classList.remove("active"));
+    links[currSectionID].classList.add("active");
+} 
+activeLink();
 /* ----------- abrir e fechar navbar menu ----------- */
 
 hamburger.addEventListener("click", () => {
